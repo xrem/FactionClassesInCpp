@@ -13,8 +13,11 @@ public:
 
 	FractionClass* add(const FractionClass* other);
 	
-	// TODO: Деление
+	// TODO: Деление*
 	FractionClass* div(const FractionClass* other);
+
+	// TODO: Умножение
+	FractionClass* mul(const FractionClass* other);
 	
 	// TODO: Вычитание
 	FractionClass* sub(const FractionClass* other);
