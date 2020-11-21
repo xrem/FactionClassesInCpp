@@ -1,20 +1,16 @@
 #include <iostream>
-#include "FractionStruct.h"
 #include "FractionClass.h"
 
 void main()
 {
-	Fraction halfStruct = { 1, 2 };
-	printFraction(halfStruct);
+	FractionClass f1 = { 1, 2 };
+	FractionClass f2 = { 2 };
+	FractionClass f3 = { };
+	FractionClass f4 = { 2,0 };
 
-	FractionClass quarter = { 1, 4 };
-	FractionClass notNormalizedQuarter = { 2, 8 };
+	f1.print();
+	f2.print();
+	f3.print();
+	f4.print();
 
-	FractionClass* half = quarter.add(&notNormalizedQuarter);
-	half->print();
-	std::cout << half->toDouble() << std::endl;
-	
-	quarter.print();
-	std::cout << quarter.toDouble() << std::endl;
-	notNormalizedQuarter.print();
 }
