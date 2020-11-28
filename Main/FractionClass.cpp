@@ -26,6 +26,13 @@ FractionClass::FractionClass(int n, int m)
 	this->is_valid = m != 0;
 }
 
+FractionClass::FractionClass(double d)
+{
+	this->upper = (int)(d * 10000);
+	this->down = 10000;
+	this->is_valid = true;
+}
+
 
 // Имплементация метода print внутри класса FractionClass
 void FractionClass::print()
@@ -118,6 +125,11 @@ FractionClass operator*(const int left, const FractionClass& right)
 	return operator*(right, left);
 }
 
+
+FractionClass::operator double()
+{
+	return this->toDouble();
+}
 
 int FractionClass::minDivider()
 {

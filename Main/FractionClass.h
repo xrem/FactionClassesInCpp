@@ -8,9 +8,11 @@ public:
 	int down;
 
 	// Конструкторы
-	FractionClass();
-	FractionClass(int n);
-	FractionClass(int n, int m);
+	explicit FractionClass();
+	explicit FractionClass(int n);
+	explicit FractionClass(int n, int m);
+	FractionClass(double);
+	
 
 	// Поведение
 	void print();
@@ -26,6 +28,10 @@ public:
 	friend FractionClass operator*(const FractionClass& left, const FractionClass& right);
 	friend FractionClass operator*(const FractionClass& left, const int right);
 	friend FractionClass operator*(const int left, const FractionClass& right);
+
+	operator double();
+
+//	operator=
 
 private:
 	bool is_valid;
