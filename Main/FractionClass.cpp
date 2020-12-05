@@ -24,6 +24,10 @@ FractionClass::FractionClass(int n, int m)
 	this->upper = n;
 	this->down = m;
 	this->is_valid = m != 0;
+	if (!is_valid)
+	{
+		throw std::exception("Denominator cannot be zero");
+	}
 }
 
 FractionClass::FractionClass(double d)
